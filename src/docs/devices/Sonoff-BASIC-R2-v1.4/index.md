@@ -76,7 +76,7 @@ binary_sensor:
         condition:
           - switch.is_off: relay
         then:
-          - switch.turn_on: blue_led
+          - light.turn_on: blue_led
           - switch.turn_on: relay
         else:
           - switch.turn_off: relay
@@ -98,7 +98,7 @@ switch:
     on_turn_off:
       if:
         condition:
-          - switch.is_on: blue_led
+          - light.is_on: blue_led
         then:
-          - switch.turn_off: blue_led
+          - light.turn_off: blue_led
 ```
